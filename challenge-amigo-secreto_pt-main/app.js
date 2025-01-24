@@ -1,31 +1,77 @@
 //O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
 let amigos = [];
-let input = document.querySelector('input');
-let lista = document.querySelector('ul');
+let input = document.getElementById('amigo');
+let lista = document.getElementById('listaAmigos');
 
     function adicionarAmigo() {
+        console.log('adicionar nome')
         let campoDigit = input.value.trim();
+        
 
+
+        if (campoDigit ==='') {
+            console.log('campo vazio')
+            alert('Por favor insira um nome!');
+            return;    
+        }
 
             if (amigos.includes(campoDigit)) {
+                
                 alert('Esse nome já esta participando!');
                 input.value = "";
                 return;
             }
-            if (campoDigit ==='') {
-                alert('Por favor insira um nome!');
-                return;    
-            }
-
-            amigos.push(campoDigit);
             
-            let novoNome = document.createElement('li');
+                
+                amigos.push(campoDigit);
+            
+        let novoNome = document.createElement('li');
             novoNome.innerHTML = campoDigit;
             lista.appendChild(novoNome);
+            
+            atualizarLista();
+
             input.value = '';
 }
-            input.querySelector('.button-add').addEventListener('click', adicionarAmigo);
-        
-            campoDigit.addEventListener('input', function() {
-            this.value = this.value.replace(/[^a-zA-Z]/g, '');
+    function atualizarLista(){
+        console.log('atualizarlista')
+                lista.innerHTML = '';
+            }
+            for (let i = 0; i < amigos.length; i++) {
+                let novoNome = document.createElement('li');
+                novoNome.textContent = amigos[i];
+                lista.appendChild(novoNome);
+            }
+
+    
+    function sortearAmigo() {
+        console.log('sortearamigo')
+        let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+        let amigoSelecionado = amigos[indiceAleatorio];
+        return amigoSelecionado;
+    }    
+
+    function exibirAmigoSorteado() {
+        console.log("Função exibirAmigoSorteado() chamada");
+        let resultadoElement = document.getElementById("resultado");
+        if (resultadoElement) {
+            if (amigos.length > 0) {
+                let amigoSorteado = sortearAmigo();
+                resultadoElement.innerHTML = `O amigo sorteado é: ${amigoSorteado}`;
+            } else {
+                resultadoElement.innerHTML = "Não há amigos cadastrados.";
+            }
+        } else {
+            console.error('Elemento com o ID "resultado" não encontrado.');
+        }
+    }
+                document.querySelector('.button-add').addEventListener('click', function() {
+                let campoDigit = input.value.trim();
+            if (campoDigit !== '') {
+                adicionarAmigo();
+            }});  
+                ;   
+
+                input.addEventListener('input', function() {
+                this.value = this.value.replace(/[^a-zA-Z]/g, '');
         });
