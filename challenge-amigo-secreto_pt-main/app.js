@@ -4,22 +4,28 @@ let input = document.querySelector('input');
 let lista = document.querySelector('ul');
 
     function adicionarAmigo() {
-        let campoDigit = document.querySelector('input').value;
-        
-        let novoNome = document.createElement('li');
-        novoNome.innerHTML = campoDigit;
-        
-        lista.appendChild(novoNome);
+        let campoDigit = input.value.trim();
 
-        input.value = '';
 
-        if (campoDigit==''){
-            alert('Por favor insira um nome!')
-        } else {
+            if (amigos.includes(campoDigit)) {
+                alert('Esse nome já esta participando!');
+                input.value = "";
+                return;
+            }
+            if (campoDigit ==='') {
+                alert('Por favor insira um nome!');
+                return;    
+            }
+
             amigos.push(campoDigit);
-            return amigos;
-        }
-    }
-    input.addEventListener('input', function() {
-        this.value = this.value.replace(/[^a-zA-Z]/g, '');
-});
+            
+            let novoNome = document.createElement('li');
+            novoNome.innerHTML = campoDigit;
+            lista.appendChild(novoNome);
+            input.value = '';
+}
+            input.querySelector('.button-add').addEventListener('click', adicionarAmigo);
+        
+            campoDigit.addEventListener('input', function() {
+            this.value = this.value.replace(/[^a-zA-Z]/g, '');
+        });
