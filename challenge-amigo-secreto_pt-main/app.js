@@ -43,28 +43,28 @@ let lista = document.getElementById('listaAmigos');
                 lista.appendChild(novoNome);
             }
 
-    
-    function sortearAmigo() {
-        console.log('sortearamigo')
-        let indiceAleatorio = Math.floor(Math.random() * amigos.length);
-        let amigoSelecionado = amigos[indiceAleatorio];
-        return amigoSelecionado;
-    }    
 
-    function exibirAmigoSorteado() {
-        console.log("Função exibirAmigoSorteado() chamada");
-        let resultadoElement = document.getElementById("resultado");
-        if (resultadoElement) {
-            if (amigos.length > 0) {
-                let amigoSorteado = sortearAmigo();
-                resultadoElement.innerHTML = `O amigo sorteado é: ${amigoSorteado}`;
-            } else {
-                resultadoElement.innerHTML = "Não há amigos cadastrados.";
-            }
-        } else {
-            console.error('Elemento com o ID "resultado" não encontrado.');
-        }
+    function sortearAmigo() {
+        
+        if (amigos.length === 0) {
+        return alert('Não há amigos na lista');
     }
+        let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+        
+        let amigoSelecionado = amigos[indiceAleatorio];
+        console.log(`O amigo selecionado é: ${amigoSelecionado}`);
+        
+        let resultadoElement = document.getElementById("resultado");
+        
+        if (resultadoElement) {
+            resultadoElement.textContent = `O amigo sorteado é: ${amigoSelecionado}`;
+         } else {
+            console.error('Elemento com o ID "resultado" não encontrado.');
+     }
+
+        return amigoSelecionado;
+    }
+ 
                 document.querySelector('.button-add').addEventListener('click', function() {
                 let campoDigit = input.value.trim();
             if (campoDigit !== '') {
