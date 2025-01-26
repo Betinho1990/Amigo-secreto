@@ -37,28 +37,6 @@ Acessar o URL e utilizar a aplicação
 
 :heavy_check_mark: Sorteia aleatóriamente um amigo por vez até o último   
 
-## Layout ou Deploy da Aplicação :dash:
-
-> Link do deploy da aplicação. Exemplo com netlify: https://certificates-for-everyone-womakerscode.netlify.app/
-
-... 
-
-Se ainda não houver deploy, insira capturas de tela da aplicação ou gifs
-
-Liste todas as dependencias e libs que o usuário deve ter instalado na máquina antes de rodar a aplicação 
-
-## Como rodar a aplicação :arrow_forward:
-
-No terminal, clone o projeto: 
-
-```
-git clone https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator
-```
-
-... 
-
-Coloque um passo a passo para rodar a sua aplicação. **Dica: clone o próprio projeto e verfique se o passo a passo funciona**
-
 ## Linguagens, dependencias e libs utilizadas :books:
 
 - Javascrpit
@@ -80,8 +58,7 @@ Se for o caso, liste tarefas/funcionalidades que ainda precisam ser implementada
 
 Liste o time responsável pelo desenvolvimento do projeto
 
-| [<img src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width=115><br><sub>Diana Regina</sub>](https://github.com/Diana-ops) |  [<img src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width=115><br><sub>Diana Regina</sub>](https://github.com/Diana-ops) |  [<img src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width=115><br><sub>Diana Regina</sub>](https://github.com/Diana-ops) |
-| :---: | :---: | :---: 
+<img src="https://avatars.githubusercontent.com/u/194714356?v=4" width="150" height="150">
 
 ## Licença 
 
