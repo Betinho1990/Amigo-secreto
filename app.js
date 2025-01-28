@@ -44,10 +44,6 @@ function sortearAmigo() {
     if (amigos.length === 0) {
         return alert('Não há amigos na lista');
     }   
-    if (amigos.length % 2 !== 0) {
-        alert("A lista de participantes terminou com um número ímpar de nomes. Por favor, adicione mais um nome para que a lista fique com um número par de participantes.");
-        return;
-    }
         let indiceAleatorio = Math.floor(Math.random() * amigos.length);
     
         let amigoSelecionado = amigos[indiceAleatorio];
